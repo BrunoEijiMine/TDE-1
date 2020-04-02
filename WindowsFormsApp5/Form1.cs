@@ -15,6 +15,7 @@ namespace WindowsFormsApp5
         public Form1()
         {
             InitializeComponent();
+            
 
            for(int data = 2020; data > 1910; data--)
             {
@@ -22,6 +23,7 @@ namespace WindowsFormsApp5
 
             }
         }
+        string genero;
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -48,29 +50,52 @@ namespace WindowsFormsApp5
             txtNome.ResetText();
             txtSobrenome.ResetText();
             txtEmail.ResetText();
-            combSexo.SelectedIndex = -1;
             txtCPF.ResetText();
             combDia.SelectedIndex = -1;
             combMes.SelectedIndex = -1;
             combAno.SelectedIndex = -1;
             txtSenha.ResetText();
             txtRepetirSenha.ResetText();
+         
 
             MessageBox.Show("Formulario limpo.");
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            if (radiobutton1.Checked)
+            {
+                genero = "masculino";
+            }
+            else
+            {
+                genero = "feminino";
+            }
             String mensagem = "";
             mensagem += "Nome: " + txtNome.Text + " " + txtSobrenome.Text + "\n";
             mensagem += "Email: "+ txtEmail.Text + "\n";
-            mensagem +="Sexo: "+ combSexo.Text + "\n";
+            mensagem += "Sexo: " + genero + "\n";
             mensagem +="CPF:  "+ txtCPF.Text + "\n";
             mensagem +="Nascimento: "+ combDia.Text + "/" + combMes.Text + "/" + combAno.Text + "\n";
             mensagem +="Senha: "+ txtSenha.Text + "\n";
-            mensagem +="RepetirSenha "+ txtRepetirSenha.Text + "\n";
+            mensagem += "RepetirSenha " + txtRepetirSenha.Text + "\n";
             MessageBox.Show(mensagem);
            
+
+        }
+
+        private void txtSobrenome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdb1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdb2_CheckedChanged(object sender, EventArgs e)
+        {
 
         }
     }

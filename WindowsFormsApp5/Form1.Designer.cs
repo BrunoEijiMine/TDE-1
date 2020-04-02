@@ -35,7 +35,6 @@
             this.txtSobrenome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.combSexo = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtCPF = new System.Windows.Forms.TextBox();
@@ -49,6 +48,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.radiobutton1 = new System.Windows.Forms.RadioButton();
+            this.radiobutton2 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
@@ -86,6 +87,7 @@
             this.txtSobrenome.Name = "txtSobrenome";
             this.txtSobrenome.Size = new System.Drawing.Size(307, 20);
             this.txtSobrenome.TabIndex = 3;
+            this.txtSobrenome.TextChanged += new System.EventHandler(this.txtSobrenome_TextChanged);
             // 
             // label3
             // 
@@ -105,18 +107,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(307, 20);
             this.txtEmail.TabIndex = 5;
-            // 
-            // combSexo
-            // 
-            this.combSexo.FormattingEnabled = true;
-            this.combSexo.Items.AddRange(new object[] {
-            "Masculino",
-            "Feminino",
-            "Outra indeterminado"});
-            this.combSexo.Location = new System.Drawing.Point(92, 163);
-            this.combSexo.Name = "combSexo";
-            this.combSexo.Size = new System.Drawing.Size(257, 21);
-            this.combSexo.TabIndex = 6;
             // 
             // label4
             // 
@@ -289,6 +279,30 @@
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
+            // radiobutton1
+            // 
+            this.radiobutton1.AutoSize = true;
+            this.radiobutton1.Location = new System.Drawing.Point(94, 166);
+            this.radiobutton1.Name = "radiobutton1";
+            this.radiobutton1.Size = new System.Drawing.Size(73, 17);
+            this.radiobutton1.TabIndex = 20;
+            this.radiobutton1.TabStop = true;
+            this.radiobutton1.Text = "Masculino";
+            this.radiobutton1.UseVisualStyleBackColor = true;
+            this.radiobutton1.CheckedChanged += new System.EventHandler(this.rdb1_CheckedChanged);
+            // 
+            // radiobutton2
+            // 
+            this.radiobutton2.AutoSize = true;
+            this.radiobutton2.Location = new System.Drawing.Point(197, 166);
+            this.radiobutton2.Name = "radiobutton2";
+            this.radiobutton2.Size = new System.Drawing.Size(67, 17);
+            this.radiobutton2.TabIndex = 21;
+            this.radiobutton2.TabStop = true;
+            this.radiobutton2.Text = "Feminino";
+            this.radiobutton2.UseVisualStyleBackColor = true;
+            this.radiobutton2.CheckedChanged += new System.EventHandler(this.rdb2_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -297,6 +311,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(407, 533);
+            this.Controls.Add(this.radiobutton2);
+            this.Controls.Add(this.radiobutton1);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.label8);
@@ -310,7 +326,6 @@
             this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.combSexo);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtSobrenome);
@@ -333,7 +348,6 @@
         private System.Windows.Forms.TextBox txtSobrenome;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.ComboBox combSexo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtCPF;
@@ -347,6 +361,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.RadioButton radiobutton1;
+        private System.Windows.Forms.RadioButton radiobutton2;
     }
 }
 
