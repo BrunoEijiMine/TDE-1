@@ -15,9 +15,9 @@ namespace WindowsFormsApp5
         public Form1()
         {
             InitializeComponent();
-            
 
-           for(int data = 2020; data > 1910; data--)
+
+            for (int data = 2020; data > 1910; data--)
             {
                 combAno.Items.Add(data);
 
@@ -56,7 +56,7 @@ namespace WindowsFormsApp5
             combAno.SelectedIndex = -1;
             txtSenha.ResetText();
             txtRepetirSenha.ResetText();
-         
+
 
             MessageBox.Show("Formulario limpo.");
         }
@@ -73,14 +73,14 @@ namespace WindowsFormsApp5
             }
             String mensagem = "";
             mensagem += "Nome: " + txtNome.Text + " " + txtSobrenome.Text + "\n";
-            mensagem += "Email: "+ txtEmail.Text + "\n";
+            mensagem += "Email: " + txtEmail.Text + "\n";
             mensagem += "Sexo: " + genero + "\n";
-            mensagem +="CPF:  "+ txtCPF.Text + "\n";
-            mensagem +="Nascimento: "+ combDia.Text + "/" + combMes.Text + "/" + combAno.Text + "\n";
-            mensagem +="Senha: "+ txtSenha.Text + "\n";
+            mensagem += "CPF:  " + txtCPF.Text + "\n";
+            mensagem += "Nascimento: " + combDia.Text + "/" + combMes.Text + "/" + combAno.Text + "\n";
+            mensagem += "Senha: " + txtSenha.Text + "\n";
             mensagem += "RepetirSenha " + txtRepetirSenha.Text + "\n";
             MessageBox.Show(mensagem);
-           
+
 
         }
 
@@ -107,6 +107,18 @@ namespace WindowsFormsApp5
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "brunoeiji@gmail.com" && textBox2.Text == "12345")
+            {
+                MessageBox.Show("Seja Bem vindo !");
+            }
+            else
+            {
+                MessageBox.Show("Login ou Senha Inválidos, tente novamente!");
+            }
         }
     }
 }
