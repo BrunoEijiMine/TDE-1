@@ -65,11 +65,11 @@ namespace WindowsFormsApp5
         {
             if (radiobutton1.Checked)
             {
-                genero = "masculino";
+                genero = "Masculino";
             }
             else
             {
-                genero = "feminino";
+                genero = "Feminino";
             }
             String mensagem = "";
             mensagem += "Nome: " + txtNome.Text + " " + txtSobrenome.Text + "\n";
@@ -95,6 +95,16 @@ namespace WindowsFormsApp5
         }
 
         private void rdb2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRepetirSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
